@@ -1,0 +1,99 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #000000, #434343); /* Dark gradient */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: slideUp 1s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  animation: slideUp 1.5s ease-in-out;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #ff0055;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 0, 85, 0.3);
+}
+
+.btn:hover {
+  background-color: #ff3366;
+  transform: scale(1.08);
+  box-shadow: 0 6px 25px rgba(255, 0, 85, 0.6);
+  letter-spacing: 1px;
+}
+
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
